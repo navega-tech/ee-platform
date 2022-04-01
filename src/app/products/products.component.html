@@ -1,0 +1,33 @@
+<h2>Product List</h2>
+
+<table class="table table-responsive">
+    <thead>
+        <th>
+            Product Id
+        </th>
+        <th>
+            Category
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+            Available Stock
+        </th>
+
+    </thead>
+    <tbody>
+     <tr *ngFor="let product of productList">
+       <td>{{product.ProductId}}</td>
+       <td>{{product.ProductName}}</td>
+       <td>{{product.Category}}</td>
+       <td>{{product.Price}}</td>
+
+       <td *ngIf="product.AvailableStock!=0">{{product.AvailableStock}}</td>
+       <td *ngIf="product.AvailableStock==0" style="color:red">Out of Stock</td>
+     </tr>
+    </tbody>
+</table>

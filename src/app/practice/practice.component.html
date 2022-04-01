@@ -1,0 +1,23 @@
+<div class="container">
+    <b> Product ID: {{ProductId}}</b>
+    <br>
+    <b>Product Name: {{ProductName}}</b> 
+    <br>
+    <b>Category :{{Category}}</b> 
+    <br>
+     <b>Unit Price: {{Price}}</b>
+     <br>
+     <b>Available Stock: {{AvailableStock}}</b>
+     <br>
+     <b>Description: {{Description}}</b>
+
+     <h2>Students Mark Sheet</h2>
+     <b>Marks:</b>
+     <span *ngFor="let subMarks of studentMarks">
+        <p *ngIf="subMarks>=35">{{subMarks}}</p>
+        <p *ngIf="subMarks<35" style="color:red;">{{subMarks}}*Fail</p>
+     </span>
+     <b>Total Marks:</b> {{totalScore}}
+     <b>Average Marks:</b> {{avgScore}}
+
+</div>
